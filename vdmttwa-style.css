@@ -1,0 +1,400 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Header and Footer */
+header {
+  background: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+header img {
+  height: 60px;
+  margin-right: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #2b2d42;
+  color: white;
+  margin-top: 40px;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+nav ul li {
+  margin-right: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* Slideshow-specific styling */
+.slideshow {
+  display: flex;
+  flex: 1;
+}
+
+.slideshow-img,
+.slideshow-img-events {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Home Page Section Styling */
+#home .section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px 20px;
+  border: 1px solid #ddd;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  max-width: 1100px;
+  transition: transform 0.3s;
+}
+
+#home .section:hover {
+  transform: translateY(-5px);
+}
+
+#home .section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  flex: 1;
+}
+
+#home .section .text {
+  flex: 1;
+  padding: 20px;
+}
+
+#home .section .text h3 {
+  font-size: 24px;
+  color: #2b2d42;
+  margin-bottom: 10px;
+}
+
+#home .section .text p {
+  font-size: 16px;
+  color: #444;
+}
+
+#home .section:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+/* Section Backgrounds */
+#home {
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 8px;
+  color: #000;
+  background-image: url('images/home-bg.jpg');
+  background-size: cover;
+}
+
+#about, #members {
+  background-color: #e0f7fa;  /*#e8f5e9;*/
+  padding: 20px;
+  border-radius: 8px;
+  color: #000;
+}
+
+#team {
+  background-color:  #fffde7;
+  padding: 20px;
+  border-radius: 8px;
+  color: #000;
+  background-image: url('images/team-bg.jpg');
+  background-size: cover;
+}
+
+#rankings {
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 8px;
+  color: #000;
+}
+
+#events, #gallery {
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 8px;
+  color: #000;
+}
+
+#contact {
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 8px;
+  color: #000;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table.full-width {
+  width: 100%;
+}
+
+table.fixed-width {
+  width: 600px;
+  margin: 10px auto;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Team Section Only: Image Sizing */
+#team img.enlargeable {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  max-width: 100px;
+}
+
+#team img.enlargeable:hover {
+  transform: scale(1.2);
+}
+
+/* Team Grid Layout */
+.team-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.team-role {
+  grid-column: 1 / -1;
+  background-color: #ffecb3;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.team-member {
+  background-color: #ffffffaa;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-member.left {
+  grid-column: 1;
+}
+
+.team-member.right {
+  grid-column: 2;
+}
+
+.team-member p {
+  margin: 8px 0 4px;
+}
+
+.team-member img {
+  display: block;
+  margin: 4px auto 0;
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Hidden Pages */
+.hidden {
+  display: none;
+}
+
+
+/* Dropdowns */
+nav ul li.dropdown {
+  position: relative;
+}
+
+nav ul li .dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li .dropdown-content li a {
+  color: white;
+  padding: 10px 15px;
+  display: flex;              /* ✅ changed from block to flex */
+  justify-content: flex-start; /* ✅ forces left alignment */
+  text-align: left;
+  text-decoration: none;
+}
+
+nav ul li .dropdown-content li a:hover {
+  background-color: #555;
+}
+
+nav ul li.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav ul li .dropdown-content {
+  animation: fadeInDown 0.3s ease-in-out;
+}
+
+
+.gallery-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  background: #fff;
+}
+
+
+
+#lightboxModal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+#lightboxModal img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.modal-controls {
+  position: absolute;
+  top: 50%;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 20px;
+}
+
+#lightboxPrev {
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+#lightboxNext {
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+#lightboxClose {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+.gallery-image {
+  flex: 0 0 30%;
+  max-width: 30%;
+  height: auto;
+  border-radius: 10px;
+  cursor: zoom-in;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .gallery-image {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-image {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+}
