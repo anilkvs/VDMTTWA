@@ -172,10 +172,24 @@ table.full-width {
   width: 100%;
 }
 
-table.fixed-width {
+table.fixed-width { 
   width: 600px;
   margin: 10px auto;
+} 
+
+table.auto-width {  /* Used in Rakings Page */
+  width: auto;
+  margin: 10px auto;
 }
+
+table.auto-width td:last-child {  /* Used in Rakings Page last column */
+
+  color: red;
+  font-weight: bold;
+}
+
+
+
 
 th, td {
   border: 1px solid #ccc;
@@ -187,6 +201,7 @@ td.member-name {
   text-align: left;
   padding-left: 10px;
 }
+
 
 
 /* Team Section Only: Image Sizing */
@@ -403,4 +418,40 @@ nav ul li .dropdown-content {
     flex: 0 0 90%;
     max-width: 90%;
   }
+}
+
+#banner-rotator {
+  width: 96%;
+  max-width: 1300px;
+  margin: 10px auto;
+  height: 100px;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ccc;
+}
+
+.banner-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-slide.active {
+  display: flex;
+}
+
+.banner-slide img,
+.banner-slide video {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 16px;
 }
